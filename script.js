@@ -28,11 +28,9 @@ const BUTTON_MAP = {
    ============================================================ */
 function applyLinks() {
   Object.keys(BUTTON_MAP).forEach(function (id) {
-    var el = document.getElementById(id);
-    var key = BUTTON_MAP[id];
-    if (el && LINKS[key]) {
-      el.href = LINKS[key];
-    }
+    const el = document.getElementById(id);
+    const key = BUTTON_MAP[id];
+    if (el && LINKS[key]) el.href = LINKS[key];
   });
 }
 
