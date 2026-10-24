@@ -83,7 +83,7 @@ body {
 }
 
 /* ============================================================
-   CTA TELEGRAM (UTAMA)
+   CTA TELEGRAM
    ============================================================ */
 .cta-top {
   display: flex;
@@ -146,7 +146,6 @@ body {
   letter-spacing: 2px;
   text-align: center;
   margin-bottom: 12px;
-  position: relative;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -178,7 +177,6 @@ body {
   text-decoration: none;
   color: #e6edf3;
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-  position: relative;
 }
 
 .box:hover {
@@ -282,7 +280,7 @@ body {
   color: #ff6b35;
 }
 
-/* EXPIRED INFO (khusus VIP) */
+/* EXPIRED INFO (VIP) */
 .box__expired {
   display: inline-block;
   padding: 5px 12px;
@@ -388,8 +386,9 @@ body {
 
 @media (max-width: 380px) {
   .header__title { font-size: 17px; }
+  .header__tag { font-size: 10px; }
   .cta-top { padding: 14px 14px; gap: 10px; }
   .cta-top__label { font-size: 13px; }
   .box { padding: 14px 15px; }
   .box__name { font-size: 15px; }
-   }
+     }
