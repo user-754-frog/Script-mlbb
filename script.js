@@ -28,7 +28,6 @@ const BUTTON_MAP = {
    ============================================================ */
 document.addEventListener("DOMContentLoaded", () => {
   applyLinks();
-  initTypewriter();
   initMatrix();
 });
 
@@ -43,53 +42,7 @@ function applyLinks() {
 }
 
 /* ============================================================
-   TYPEWRITER — efek ketik di terminal
-   ============================================================ */
-function initTypewriter() {
-  const el = document.getElementById("typewriter");
-  if (!el) return;
-
-  const phrases = [
-    "loading mlbb_scripts.db...",
-    "injecting anti_ban_module.so...",
-    "damage_multiplier := 2.0x",
-    "drone_view.init()",
-    "bypass_detection: SUCCESS",
-    "access granted ✓"
-  ];
-
-  let phraseIndex = 0;
-  let charIndex = 0;
-  let deleting = false;
-
-  function type() {
-    const current = phrases[phraseIndex];
-
-    if (!deleting) {
-      el.textContent = current.substring(0, charIndex + 1);
-      charIndex++;
-      if (charIndex === current.length) {
-        deleting = true;
-        setTimeout(type, 1800);
-        return;
-      }
-    } else {
-      el.textContent = current.substring(0, charIndex - 1);
-      charIndex--;
-      if (charIndex === 0) {
-        deleting = false;
-        phraseIndex = (phraseIndex + 1) % phrases.length;
-      }
-    }
-
-    setTimeout(type, deleting ? 25 : 60);
-  }
-
-  type();
-}
-
-/* ============================================================
-   MATRIX RAIN — subtle background
+   MATRIX RAIN — subtle, tidak mengganggu
    ============================================================ */
 function initMatrix() {
   const canvas = document.getElementById("matrix");
@@ -101,18 +54,18 @@ function initMatrix() {
   function resize() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    const columns = Math.floor(canvas.width / 16);
+    const columns = Math.floor(canvas.width / 18);
     drops = Array(columns).fill(1);
   }
 
   resize();
   window.addEventListener("resize", resize);
 
-  const chars = "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン01";
-  const fontSize = 14;
+  const chars = "アイウエオカキクケコサシスセソタチツテト01";
+  const fontSize = 16;
 
   function draw() {
-    ctx.fillStyle = "rgba(5, 8, 16, 0.08)";
+    ctx.fillStyle = "rgba(6, 10, 18, 0.1)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     ctx.fillStyle = "rgba(0, 255, 65, 0.5)";
@@ -120,14 +73,14 @@ function initMatrix() {
 
     for (let i = 0; i < drops.length; i++) {
       const text = chars[Math.floor(Math.random() * chars.length)];
-      ctx.fillText(text, i * 16, drops[i] * fontSize);
+      ctx.fillText(text, i * 18, drops[i] * fontSize);
 
-      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+      if (drops[i] * fontSize > canvas.height && Math.random() > 0.98) {
         drops[i] = 0;
       }
       drops[i]++;
     }
   }
 
-  setInterval(draw, 70);
-  }
+  setInterval(draw, 90);
+                                }
