@@ -24,63 +24,21 @@ const BUTTON_MAP = {
 };
 
 /* ============================================================
-   INIT
-   ============================================================ */
-document.addEventListener("DOMContentLoaded", () => {
-  applyLinks();
-  initMatrix();
-});
-
-/* ============================================================
-   APPLY LINK KE SEMUA TOMBOL
+   APPLY LINK
    ============================================================ */
 function applyLinks() {
-  Object.entries(BUTTON_MAP).forEach(([id, key]) => {
-    const el = document.getElementById(id);
-    if (el && LINKS[key]) el.href = LINKS[key];
+  Object.keys(BUTTON_MAP).forEach(function (id) {
+    var el = document.getElementById(id);
+    var key = BUTTON_MAP[id];
+    if (el && LINKS[key]) {
+      el.href = LINKS[key];
+    }
   });
 }
 
-/* ============================================================
-   MATRIX RAIN — subtle, tidak mengganggu
-   ============================================================ */
-function initMatrix() {
-  const canvas = document.getElementById("matrix");
-  if (!canvas) return;
-
-  const ctx = canvas.getContext("2d");
-  let drops = [];
-
-  function resize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    const columns = Math.floor(canvas.width / 18);
-    drops = Array(columns).fill(1);
-  }
-
-  resize();
-  window.addEventListener("resize", resize);
-
-  const chars = "アイウエオカキクケコサシスセソタチツテト01";
-  const fontSize = 16;
-
-  function draw() {
-    ctx.fillStyle = "rgba(6, 10, 18, 0.1)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    ctx.fillStyle = "rgba(0, 255, 65, 0.5)";
-    ctx.font = fontSize + "px monospace";
-
-    for (let i = 0; i < drops.length; i++) {
-      const text = chars[Math.floor(Math.random() * chars.length)];
-      ctx.fillText(text, i * 18, drops[i] * fontSize);
-
-      if (drops[i] * fontSize > canvas.height && Math.random() > 0.98) {
-        drops[i] = 0;
-      }
-      drops[i]++;
-    }
-  }
-
-  setInterval(draw, 90);
-                                }
+/* Jalankan setelah DOM siap */
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", applyLinks);
+} else {
+  applyLinks();
+}
