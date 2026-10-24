@@ -4,158 +4,126 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Script & Tools MLBB — anti-ban, update harian, support 24/7.">
-  <title>MLBB_Scripts — Ambil Script Kamu</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <title>MLBB Scripts — Ambil Script Kamu</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <canvas id="matrix" aria-hidden="true"></canvas>
-  <div class="scanlines" aria-hidden="true"></div>
-
   <main class="container">
 
-    <!-- ============================================= -->
-    <!-- HEADER — minimal, 1 baris, langsung point -->
-    <!-- ============================================= -->
+    <!-- HEADER -->
     <header class="header">
-      <div class="header__logo">
-        <span class="header__bracket">[</span>
-        <span class="header__icon">🎮</span>
-        <span class="header__bracket">]</span>
-      </div>
+      <div class="header__logo">🎮</div>
       <div class="header__text">
-        <h1 class="header__title">MLBB_Scripts<span class="blink">_</span></h1>
+        <h1 class="header__title">MLBB Scripts</h1>
         <p class="header__tag">Script &amp; Tools Premium — Anti-Ban • Update Harian</p>
       </div>
     </header>
 
-    <!-- ============================================= -->
-    <!-- CTA UTAMA — Telegram (paling atas, paling besar) -->
-    <!-- ============================================= -->
+    <!-- CTA TELEGRAM -->
     <a id="btnTelegram" class="cta-top" target="_blank" rel="noopener">
-      <span class="cta-top__icon">✈️</span>
-      <span class="cta-top__body">
-        <span class="cta-top__label">JOIN TELEGRAM — GRATIS</span>
-        <span class="cta-top__sub">Akses semua script &amp; update harian</span>
-      </span>
-      <span class="cta-top__arrow">→</span>
+      <div class="cta-top__icon">✈️</div>
+      <div class="cta-top__body">
+        <div class="cta-top__label">JOIN TELEGRAM — GRATIS</div>
+        <div class="cta-top__sub">Akses semua script &amp; update harian</div>
+      </div>
+      <div class="cta-top__arrow">→</div>
     </a>
 
-    <!-- ============================================= -->
-    <!-- 5 BOX PRODUK — semua visible above the fold -->
-    <!-- ============================================= -->
-    <section class="products" aria-label="Daftar script">
-      <div class="products__label">
-        <span class="products__line"></span>
-        <span>PILIH SCRIPT KAMU</span>
-        <span class="products__line"></span>
-      </div>
+    <!-- SECTION PRODUK -->
+    <section class="products">
+      <div class="products__label">PILIH SCRIPT KAMU</div>
 
       <div class="products__grid">
 
-        <!-- 1. Damage -->
+        <!-- 1. Script Damage -->
         <a id="btnScriptDamage" class="box" target="_blank" rel="noopener">
-          <div class="box__top">
-            <span class="box__icon">⚔️</span>
-            <span class="box__badge box__badge--free">GRATIS</span>
+          <div class="box__head">
+            <div class="box__icon">⚔️</div>
+            <div class="box__badge box__badge--free">GRATIS</div>
           </div>
           <div class="box__name">Script Damage</div>
-          <div class="box__desc">Damage auto-max, aim presisi</div>
-          <div class="box__bottom">
-            <span class="box__cmd">$ ./damage.sh</span>
-            <span class="box__go">AMBIL →</span>
+          <div class="box__desc">Damage auto-max, aim presisi tinggi.</div>
+          <div class="box__foot">
+            <span class="box__go">AMBIL SCRIPT →</span>
           </div>
         </a>
 
         <!-- 2. Drone View -->
         <a id="btnDroneView" class="box" target="_blank" rel="noopener">
-          <div class="box__top">
-            <span class="box__icon">🛸</span>
-            <span class="box__badge box__badge--free">GRATIS</span>
+          <div class="box__head">
+            <div class="box__icon">🛸</div>
+            <div class="box__badge box__badge--free">GRATIS</div>
           </div>
           <div class="box__name">Drone View</div>
-          <div class="box__desc">Lihat map tanpa batas</div>
-          <div class="box__bottom">
-            <span class="box__cmd">$ ./drone.sh</span>
-            <span class="box__go">AMBIL →</span>
+          <div class="box__desc">Sudut pandang luas, lihat map tanpa batas.</div>
+          <div class="box__foot">
+            <span class="box__go">AMBIL SCRIPT →</span>
           </div>
         </a>
 
         <!-- 3. Damage No Ads -->
         <a id="btnScriptDamageNoAds" class="box" target="_blank" rel="noopener">
-          <div class="box__top">
-            <span class="box__icon">🚫</span>
-            <span class="box__badge box__badge--noads">NO ADS</span>
+          <div class="box__head">
+            <div class="box__icon">🚫</div>
+            <div class="box__badge box__badge--noads">NO ADS</div>
           </div>
           <div class="box__name">Damage No Ads</div>
-          <div class="box__desc">Tanpa iklan, langsung pakai</div>
-          <div class="box__bottom">
-            <span class="box__cmd">$ ./damage_noads.sh</span>
-            <span class="box__go">AMBIL →</span>
+          <div class="box__desc">Damage script tanpa iklan, langsung pakai.</div>
+          <div class="box__foot">
+            <span class="box__go">AMBIL SCRIPT →</span>
           </div>
         </a>
 
-        <!-- 4. Drone No Ads -->
+        <!-- 4. Drone View No Ads -->
         <a id="btnDroneViewNoAds" class="box" target="_blank" rel="noopener">
-          <div class="box__top">
-            <span class="box__icon">🛸</span>
-            <span class="box__badge box__badge--noads">NO ADS</span>
+          <div class="box__head">
+            <div class="box__icon">🛸</div>
+            <div class="box__badge box__badge--noads">NO ADS</div>
           </div>
           <div class="box__name">Drone View No Ads</div>
-          <div class="box__desc">Drone view bersih tanpa iklan</div>
-          <div class="box__bottom">
-            <span class="box__cmd">$ ./drone_noads.sh</span>
-            <span class="box__go">AMBIL →</span>
+          <div class="box__desc">Drone view bersih tanpa gangguan iklan.</div>
+          <div class="box__foot">
+            <span class="box__go">AMBIL SCRIPT →</span>
           </div>
         </a>
 
-        <!-- 5. VIP (full width, paling menonjol) -->
+        <!-- 5. VIP -->
         <a id="btnScriptDamageVip" class="box box--vip" target="_blank" rel="noopener">
-          <div class="box__top">
-            <span class="box__icon">👑</span>
-            <span class="box__badge box__badge--vip">VIP</span>
+          <div class="box__head">
+            <div class="box__icon">👑</div>
+            <div class="box__badge box__badge--vip">VIP</div>
           </div>
           <div class="box__name">Script Damage VIP</div>
-          <div class="box__desc">Fitur eksklusif &amp; paling stabil</div>
-          <div class="box__expired">
-            <span class="box__expired-icon">⏳</span>
-            <span>Expired Season 43</span>
-          </div>
-          <div class="box__bottom">
-            <span class="box__cmd">$ ./damage_vip.sh</span>
-            <span class="box__go">AMBIL →</span>
+          <div class="box__desc">Fitur eksklusif, prioritas update, performa paling stabil.</div>
+          <div class="box__expired">⏳ Expired Season 43</div>
+          <div class="box__foot">
+            <span class="box__go">AMBIL SCRIPT →</span>
           </div>
         </a>
 
       </div>
     </section>
 
-    <!-- ============================================= -->
-    <!-- TRUST STRIP — kecil, 3 poin -->
-    <!-- ============================================= -->
-    <section class="trust" aria-label="Keunggulan">
+    <!-- TRUST STRIP -->
+    <section class="trust">
       <div class="trust__item">
-        <span class="trust__icon">🛡️</span>
-        <span>Anti-Ban</span>
+        <div class="trust__icon">🛡️</div>
+        <div class="trust__text">Anti-Ban</div>
       </div>
       <div class="trust__item">
-        <span class="trust__icon">⚡</span>
-        <span>Update Harian</span>
+        <div class="trust__icon">⚡</div>
+        <div class="trust__text">Update Harian</div>
       </div>
       <div class="trust__item">
-        <span class="trust__icon">💬</span>
-        <span>Support 24/7</span>
+        <div class="trust__icon">💬</div>
+        <div class="trust__text">Support 24/7</div>
       </div>
     </section>
 
-    <!-- ============================================= -->
-    <!-- CTA PENUTUP -->
-    <!-- ============================================= -->
+    <!-- CTA BAWAH -->
     <a id="btnTelegramBottom" class="cta-bottom" target="_blank" rel="noopener">
-      <div class="cta-bottom__title">&gt; butuh bantuan / info update?</div>
+      <div class="cta-bottom__text">Butuh bantuan atau info update?</div>
       <div class="cta-bottom__btn">
         <span>✈️</span>
         <span>Gabung Telegram Sekarang</span>
@@ -167,4 +135,4 @@
 
   <script src="script.js"></script>
 </body>
-          </html>
+            </html>
