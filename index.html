@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Script & Tools MLBB — anti-ban, update harian, support 24/7.">
-  <title>MLBB_Scripts — Terminal Access</title>
+  <title>MLBB_Scripts — Ambil Script Kamu</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -17,180 +17,150 @@
 
   <main class="container">
 
-    <!-- TERMINAL WINDOW -->
-    <div class="terminal">
-      <div class="terminal__bar">
-        <span class="terminal__dot terminal__dot--red"></span>
-        <span class="terminal__dot terminal__dot--yellow"></span>
-        <span class="terminal__dot terminal__dot--green"></span>
-        <span class="terminal__title">root@mlbb-scripts: ~</span>
+    <!-- ============================================= -->
+    <!-- HEADER — minimal, 1 baris, langsung point -->
+    <!-- ============================================= -->
+    <header class="header">
+      <div class="header__logo">
+        <span class="header__bracket">[</span>
+        <span class="header__icon">🎮</span>
+        <span class="header__bracket">]</span>
       </div>
-      <div class="terminal__body">
-        <div class="terminal__line">
-          <span class="prompt">root@mlbb:~$</span>
-          <span class="typing" id="typewriter"></span><span class="cursor">▊</span>
-        </div>
-        <div class="terminal__output">
-          <p><span class="dim">[ OK ]</span> loaded <span class="green">5</span> scripts successfully</p>
-          <p><span class="dim">[ OK ]</span> anti-ban system: <span class="green">ACTIVE</span></p>
-          <p><span class="dim">[ OK ]</span> update patch: <span class="green">v2.4.1</span></p>
-          <p><span class="dim">[ OK ]</span> ready to execute...</p>
-        </div>
+      <div class="header__text">
+        <h1 class="header__title">MLBB_Scripts<span class="blink">_</span></h1>
+        <p class="header__tag">Script &amp; Tools Premium — Anti-Ban • Update Harian</p>
       </div>
-    </div>
-
-    <!-- HERO -->
-    <header class="hero">
-      <div class="logo">
-        <span class="logo__bracket">{</span>
-        <span class="logo__icon">🎮</span>
-        <span class="logo__bracket">}</span>
-      </div>
-
-      <h1 class="hero__title">
-        <span class="green">&lt;</span> MLBB_Scripts <span class="green">/&gt;</span>
-      </h1>
-
-      <p class="hero__subtitle">
-        <span class="green">//</span> Damage maksimal, drone view, anti-ban — tanpa iklan, update harian.
-      </p>
-
-      <a id="btnTelegram" class="btn btn--telegram btn--large" target="_blank" rel="noopener">
-        <span class="btn__prefix">$</span>
-        <span class="btn__text">join_telegram.sh --now</span>
-        <span class="btn__arrow">→</span>
-      </a>
-
-      <p class="hero__note">100% Gratis <span class="dim">•</span> Tanpa Registrasi <span class="dim">•</span> Akses Instan</p>
     </header>
 
-    <!-- TRUST -->
-    <section class="trust">
-      <div class="trust__item"><span class="check">[✓]</span> anti-ban: <span class="green">enabled</span></div>
-      <div class="trust__item"><span class="check">[✓]</span> update: <span class="green">daily</span></div>
-      <div class="trust__item"><span class="check">[✓]</span> support: <span class="green">24/7</span></div>
-    </section>
+    <!-- ============================================= -->
+    <!-- CTA UTAMA — Telegram (paling atas, paling besar) -->
+    <!-- ============================================= -->
+    <a id="btnTelegram" class="cta-top" target="_blank" rel="noopener">
+      <span class="cta-top__icon">✈️</span>
+      <span class="cta-top__body">
+        <span class="cta-top__label">JOIN TELEGRAM — GRATIS</span>
+        <span class="cta-top__sub">Akses semua script &amp; update harian</span>
+      </span>
+      <span class="cta-top__arrow">→</span>
+    </a>
 
-    <!-- FEATURES -->
-    <section class="features">
-      <h2 class="section-title"><span class="dim">##</span> Features</h2>
+    <!-- ============================================= -->
+    <!-- 5 BOX PRODUK — semua visible above the fold -->
+    <!-- ============================================= -->
+    <section class="products" aria-label="Daftar script">
+      <div class="products__label">
+        <span class="products__line"></span>
+        <span>PILIH SCRIPT KAMU</span>
+        <span class="products__line"></span>
+      </div>
 
-      <div class="features__grid">
-        <div class="feature">
-          <div class="feature__header"><span class="dim">&gt;_</span> anti_ban.sh</div>
-          <div class="feature__icon">🛡️</div>
-          <h3 class="feature__title">Anti-Ban System</h3>
-          <p class="feature__desc">Sistem keamanan terbaru, aman tanpa risiko banned.</p>
-        </div>
-        <div class="feature">
-          <div class="feature__header"><span class="dim">&gt;_</span> updater.sh</div>
-          <div class="feature__icon">⚡</div>
-          <h3 class="feature__title">Update Setiap Hari</h3>
-          <p class="feature__desc">Selalu kompatibel dengan patch MLBB terbaru.</p>
-        </div>
-        <div class="feature">
-          <div class="feature__header"><span class="dim">&gt;_</span> optimizer.sh</div>
-          <div class="feature__icon">🚀</div>
-          <h3 class="feature__title">Performa Maksimal</h3>
-          <p class="feature__desc">Ringan, cepat, dan tidak bikin HP panas.</p>
-        </div>
-        <div class="feature">
-          <div class="feature__header"><span class="dim">&gt;_</span> support.sh</div>
-          <div class="feature__icon">💬</div>
-          <h3 class="feature__title">Support 24/7</h3>
-          <p class="feature__desc">Tim siap bantu kapan saja lewat Telegram.</p>
-        </div>
+      <div class="products__grid">
+
+        <!-- 1. Damage -->
+        <a id="btnScriptDamage" class="box" target="_blank" rel="noopener">
+          <div class="box__top">
+            <span class="box__icon">⚔️</span>
+            <span class="box__badge box__badge--free">GRATIS</span>
+          </div>
+          <div class="box__name">Script Damage</div>
+          <div class="box__desc">Damage auto-max, aim presisi</div>
+          <div class="box__bottom">
+            <span class="box__cmd">$ ./damage.sh</span>
+            <span class="box__go">AMBIL →</span>
+          </div>
+        </a>
+
+        <!-- 2. Drone View -->
+        <a id="btnDroneView" class="box" target="_blank" rel="noopener">
+          <div class="box__top">
+            <span class="box__icon">🛸</span>
+            <span class="box__badge box__badge--free">GRATIS</span>
+          </div>
+          <div class="box__name">Drone View</div>
+          <div class="box__desc">Lihat map tanpa batas</div>
+          <div class="box__bottom">
+            <span class="box__cmd">$ ./drone.sh</span>
+            <span class="box__go">AMBIL →</span>
+          </div>
+        </a>
+
+        <!-- 3. Damage No Ads -->
+        <a id="btnScriptDamageNoAds" class="box" target="_blank" rel="noopener">
+          <div class="box__top">
+            <span class="box__icon">🚫</span>
+            <span class="box__badge box__badge--noads">NO ADS</span>
+          </div>
+          <div class="box__name">Damage No Ads</div>
+          <div class="box__desc">Tanpa iklan, langsung pakai</div>
+          <div class="box__bottom">
+            <span class="box__cmd">$ ./damage_noads.sh</span>
+            <span class="box__go">AMBIL →</span>
+          </div>
+        </a>
+
+        <!-- 4. Drone No Ads -->
+        <a id="btnDroneViewNoAds" class="box" target="_blank" rel="noopener">
+          <div class="box__top">
+            <span class="box__icon">🛸</span>
+            <span class="box__badge box__badge--noads">NO ADS</span>
+          </div>
+          <div class="box__name">Drone View No Ads</div>
+          <div class="box__desc">Drone view bersih tanpa iklan</div>
+          <div class="box__bottom">
+            <span class="box__cmd">$ ./drone_noads.sh</span>
+            <span class="box__go">AMBIL →</span>
+          </div>
+        </a>
+
+        <!-- 5. VIP (full width, paling menonjol) -->
+        <a id="btnScriptDamageVip" class="box box--vip" target="_blank" rel="noopener">
+          <div class="box__top">
+            <span class="box__icon">👑</span>
+            <span class="box__badge box__badge--vip">VIP</span>
+          </div>
+          <div class="box__name">Script Damage VIP</div>
+          <div class="box__desc">Fitur eksklusif &amp; paling stabil</div>
+          <div class="box__bottom">
+            <span class="box__cmd">$ ./damage_vip.sh</span>
+            <span class="box__go">AMBIL →</span>
+          </div>
+        </a>
+
       </div>
     </section>
 
-    <!-- SCRIPTS -->
-    <section class="scripts">
-      <div class="scripts__header">
-        <h2 class="section-title"><span class="dim">##</span> Scripts</h2>
-        <span class="scripts__badge">[ HOT ]</span>
+    <!-- ============================================= -->
+    <!-- TRUST STRIP — kecil, 3 poin -->
+    <!-- ============================================= -->
+    <section class="trust" aria-label="Keunggulan">
+      <div class="trust__item">
+        <span class="trust__icon">🛡️</span>
+        <span>Anti-Ban</span>
       </div>
-
-      <a id="btnScriptDamage" class="card" target="_blank" rel="noopener">
-        <div class="card__icon">⚔️</div>
-        <div class="card__body">
-          <div class="card__meta">
-            <span class="card__prompt">~/scripts$</span>
-            <span class="card__badge card__badge--free">FREE</span>
-          </div>
-          <h3 class="card__title">damage.sh</h3>
-          <p class="card__desc">Damage auto-max, combo cepat, aim presisi tinggi.</p>
-        </div>
-        <div class="card__arrow">→</div>
-      </a>
-
-      <a id="btnDroneView" class="card" target="_blank" rel="noopener">
-        <div class="card__icon">🛸</div>
-        <div class="card__body">
-          <div class="card__meta">
-            <span class="card__prompt">~/scripts$</span>
-            <span class="card__badge card__badge--free">FREE</span>
-          </div>
-          <h3 class="card__title">drone_view.sh</h3>
-          <p class="card__desc">Sudut pandang luas ala pro player, lihat map tanpa batas.</p>
-        </div>
-        <div class="card__arrow">→</div>
-      </a>
-
-      <a id="btnScriptDamageNoAds" class="card" target="_blank" rel="noopener">
-        <div class="card__icon">🚫</div>
-        <div class="card__body">
-          <div class="card__meta">
-            <span class="card__prompt">~/scripts$</span>
-            <span class="card__badge card__badge--noads">NO_ADS</span>
-          </div>
-          <h3 class="card__title">damage_noads.sh</h3>
-          <p class="card__desc">Damage script tanpa iklan, langsung pakai.</p>
-        </div>
-        <div class="card__arrow">→</div>
-      </a>
-
-      <a id="btnDroneViewNoAds" class="card" target="_blank" rel="noopener">
-        <div class="card__icon">🛸</div>
-        <div class="card__body">
-          <div class="card__meta">
-            <span class="card__prompt">~/scripts$</span>
-            <span class="card__badge card__badge--noads">NO_ADS</span>
-          </div>
-          <h3 class="card__title">drone_noads.sh</h3>
-          <p class="card__desc">Drone view bersih tanpa gangguan iklan.</p>
-        </div>
-        <div class="card__arrow">→</div>
-      </a>
-
-      <a id="btnScriptDamageVip" class="card card--vip" target="_blank" rel="noopener">
-        <div class="card__icon">👑</div>
-        <div class="card__body">
-          <div class="card__meta">
-            <span class="card__prompt">~/scripts$</span>
-            <span class="card__badge card__badge--vip">VIP</span>
-          </div>
-          <h3 class="card__title">damage_vip.sh</h3>
-          <p class="card__desc">Fitur eksklusif, prioritas update, performa paling stabil.</p>
-        </div>
-        <div class="card__arrow">→</div>
-      </a>
+      <div class="trust__item">
+        <span class="trust__icon">⚡</span>
+        <span>Update Harian</span>
+      </div>
+      <div class="trust__item">
+        <span class="trust__icon">💬</span>
+        <span>Support 24/7</span>
+      </div>
     </section>
 
-    <!-- FINAL CTA -->
-    <section class="cta">
-      <h2 class="cta__title"><span class="green">&gt;</span> ready_to_rank_up?</h2>
-      <p class="cta__subtitle">
-        <span class="dim">//</span> Join Telegram untuk akses semua script <span class="green">gratis</span>.
-      </p>
-      <a id="btnTelegramBottom" class="btn btn--telegram btn--large" target="_blank" rel="noopener">
-        <span class="btn__prefix">$</span>
-        <span class="btn__text">./join_telegram.sh</span>
-        <span class="btn__arrow">→</span>
-      </a>
-    </section>
+    <!-- ============================================= -->
+    <!-- CTA PENUTUP -->
+    <!-- ============================================= -->
+    <a id="btnTelegramBottom" class="cta-bottom" target="_blank" rel="noopener">
+      <div class="cta-bottom__title">&gt; butuh bantuan / info update?</div>
+      <div class="cta-bottom__btn">
+        <span>✈️</span>
+        <span>Gabung Telegram Sekarang</span>
+        <span>→</span>
+      </div>
+    </a>
 
   </main>
 
   <script src="script.js"></script>
 </body>
-  </html>
+            </html>
